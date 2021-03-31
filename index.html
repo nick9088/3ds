@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Homebrew Launcher - 3DS</title>
+    <meta name="keywords" content="homebrew" />
+    <meta name="description" content="ds" />
+    <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+    <link href="hbrew.css" rel="stylesheet" type="text/css" media="all" /><link rel="shortcut icon" href="images/icon.png"/>
+    <script>
+        // pretty masterful javascript code here
+        // i wrote it myself
+        function toggleDisplay(id)
+        {
+            var el = document.getElementById(id);
+            if(el.style.display == "none") el.style.display = "block";
+            else el.style.display = "none";
+        }
+
+        function getUrlFromVersion(v)
+        {
+            return "http://smealum.github.io/ninjhax2/JL1Xf2KFVm/otherapp/"+getFilenameFromVersion(v)+".bin";
+        }
+
+        function getRopbinUrlFromVersion(v)
+        {
+            return "http://smealum.github.io/ninjhax2/JL1Xf2KFVm/r/"+getFilenameFromVersion(v)+".bin";
+        }
+
+        var global_version = {};
+
+        function updatePayload()
+        {
+            document.location.href = getUrlFromVersion([global_version[1], global_version[2], global_version[3], global_version[4], global_version[5], global_version[0]]);
+        }
+
+        function updateRopbin()
+        {
+            document.location.href = getRopbinUrlFromVersion([global_version[1], global_version[2], global_version[3], global_version[4], global_version[5], global_version[0]]);
+        }
+    </script>
+    <script src="payload_select.js"></script>
+    <style type='text/css'>
+        .firmware-form {
+            /*margin-top:300px;*/
+            text-align:center;
+            font-size:18px;
+        }
+        .firmware-form select {
+            /*width:50px;*/
+            height:40px;
+            font-size:18px;
+            text-align:center;
+            border: 1px solid #000000;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .firmware-form button {
+            border: 1px solid #000000;
+            background: #ffffff;
+            border-radius: 0px;
+            box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+            color: #000000;
+            font-family: helvetica, serif;
+            height:40px;
+            font-size:18px;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="toplogo">
+        <img class="logo" src="images/logo.png" alt="The Homebrew Launcher" width="400"/>
+    </div>
+
+    <div class="content">
+        Welcome to the unofficial 3DS Homebrew Launcher website ! This page is a fork of smealun and a hub between all the best and newest ways to get homebrew running on your system. <br>
+        If you want to see homebrew in action, check out <a href="https://www.youtube.com/watch?v=xryrEpVbCrk">this video</a> !
+    </div>
+
+    <div class="content">
+        <h2>How do I get homebrew running on my console ?</h2> 
+        <br>
+        Getting homebrew on your 3DS has never been easier ! All you need is one or more of the following titles and a bit of patience. Select the one(s) you have below to get instructions : 
+        <br>
+        <div style="margin-left: 20px; margin-top: 10px;">
+
+            <a href="javascript:toggleDisplay('snd_content');"><table> <tr>
+                <td> <img src="images/snd_icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> Nintendo 3DS Sound </td>
+            </tr> </table></a>
+            <div id="snd_content" style="display: none;">
+                <strong>NOTE</strong> : unfortunately this entrypoint was patched in update 11.4. It still works on 11.3 and below.<br>
+                You can now access homebrew through the 3DS's stock sound application! All you need to do is grab the right sound file over at nedwill's <a href="http://soundhax.com/">soundhax website</a>, and place it at the root of your SD card along with the right otherapp payload. You can grab the right otherapp payload for your console <a href="#otherapp">below on this page</a>. Don't forget to rename it to otherapp.bin and place it at the root of your SD card! <br>
+            </div>
+
+            <a href="javascript:toggleDisplay('steel_content');"><table> <tr>
+                <td> <img src="images/steel_icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> Steel Diver : Sub Wars </td>
+            </tr> </table></a>
+            <div id="steel_content" style="display: none;">
+                If you've downloaded the free Steel Diver : Sub Wars eshop game, you can use it as a homebrew entrypoint. Just head over to vegaroxas's <a href="https://vegaroxas.github.io/">steelhax webpage</a> and follow the instructions in the archive's readme file! You will need to download the right otherapp payload for your console, which you can grab <a href="#otherapp">below on this page</a>.
+            </div>
+			
+			  <a href="javascript:toggleDisplay('ssloth_content');"><table> <tr>
+                <td> <img src="images/ssl_icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> SSloth browser</td>
+            </tr> </table></a>
+            <div id="ssloth_content" style="display: none;">
+                SSloth browser is an alternative to browserhax ,Simply download the cfw starter pack and put all of the files of the starter pack<br>
+				on the SD Card. then on the 3DS browser go to <a href="https://zoogie.github.io/web/nbhax">SSloth browser website</a>
+            </div>
+
+            <a href="javascript:toggleDisplay('brhax_content');"><table> <tr>
+                <td> <img src="images/browser_icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> New browserhax </td>
+            </tr> </table></a>
+            <div id="brhax_content" style="display: none;">
+                  new-browserhax-xl (when combined with universal-otherapp) is compatible with version 11.14.0 on New 3DS and New 2DS in all regions.<br>
+				  Simply download the cfw starter pack and put all the files on the SD Card. then on the 3DS Browser go to<br>
+				  <a href="https://zoogie.github.io/web/nbhax-xl">new-browserhax-xl</a> 
+            </div>
+
+            <a href="javascript:toggleDisplay('sch_content');"><table> <tr>
+                <td> <img src="images/sch_icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> safecerthax (only OLD) </td>
+            </tr> </table></a>
+            <div id="sch_content" style="display: none;">
+                 safecerthax is only for old 3ds models it won't work on new 3ds models
+				 Simply download the cfw starter pack and put the files of the pack on the SD Card and do this
+				 
+				 Launch the System Settings application
+                 Navigate to Internet Settings -> Connection Settings
+                 Click on your network connection slot and navigate to Change Settings -> Next Page (right arrow) -> DNS
+                 Set “Auto-Obtain DNS” to “No”, then click Detailed Setup
+                 Set both the Primary DNS and Secondary DNS to 054.038.133.070
+                 Click OK, then click Save
+                 When prompted, click “Test” to perform the connection test
+                 The test should succeed
+                 Power off your device
+                 Then With your device still powered off, hold the following buttons:
+				 (Left Shoulder) + (Right Shoulder) + (D-Pad Up) + (A), then press (Power)
+                 Keep holding the buttons until the device boots into Safe Mode
+                 Press “OK” to accept the update
+                 There is no update. This is part of the exploit
+                 Press “I accept” to accept the terms and conditions
+                 The update should fail and an error message should appear
+                 If the update does not fail, it is possible that your ISP is rerouting DNS changes. Try another internet connection, or follow an alternate method, like Seedminer.
+                 Press “OK” to close the error message
+                 If the exploit was successful, you will have booted into SafeB9SInstaller
+                 If the console freezes or crashes, force power off the console, then retry this section				 
+            </div>
+        </div>
+
+    </div>
+
+    
+	        <a name="prepare"></a> 
+            <div class="content">
+        <h2>Preparing your SD card</h2>
+        <br>
+        In order for homebrew to run on your system, you will need to place a few files on your SD card :
+        <br>
+        <br>
+        <ul>
+            <li> <strong>boot.3dsx</strong> : this file should be placed at the root of your SD card. It's what ninjhax/ironhax/tubehax will run first ! Usually, this is the Homebrew Launcher. </li>
+            <li> <strong>3ds/</strong> : this folder will contain all the homebrew applications you want to install to your system. You can either place 3DSX files directly inside of that folder, or create an individual folder for each application you install.</li>
+        </ul>
+
+        To make things easier, we put together the <a href="https://smealum.github.io/ninjhax2/starter.zip">homebrew starter kit</a> and the <a href="https://thedoofmodern.github.io/3ds/cfwstarter.zip">cfw starter kit</a> you can just download it and extract it at the root of your SD card. Alternatively, you may choose to only download <a href="https://smealum.github.io/ninjhax2/boot.3dsx">The Homebrew Launcher menu executable</a> and place it at the root of your SD card. <br>
+        No matter what, you should have a file named boot.3dsx placed at the root of your SD card. <br/>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p style="color: white;">Follow smea on twitter : <a href="http://twitter.com/smealum">@smealum</a> and check out : <a href="https://thedoofmodern.gq">doofsite</a></p>
+    </div>
+</body>
+</html>
